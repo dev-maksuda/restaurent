@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flavora — Modern Kitchen &amp; Restaurant</title>
+  <meta name="description" content="Flavora Restaurant — fresh ingredients, bold flavours and a warm place to share them." />
+
+  <!-- Small icon shown in the browser tab -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>" />
+
+  <!-- Google Fonts (system fonts are used when there is no internet) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       0. PRELOADER (shown while the page loads)
+  ============================================================= -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__plate">
+      <span>🍽️</span>
+    </div>
+    <p class="preloader__text">Flavora</p>
+  </div>
+
+
+  <!-- ============================================================
+       1. HEADER / NAVIGATION BAR
+  ============================================================= -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+
+      <a href="#home" class="logo">
+        <span class="logo__icon">🍴</span>
+        <span class="logo__text">Fla<em>vora</em></span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav__menu">
+          <li><a href="#home"     class="nav__link is-active">Home</a></li>
+          <li><a href="#about"    class="nav__link">About</a></li>
+          <li><a href="#dishes"   class="nav__link">Dishes</a></li>
+          <li><a href="#menu"     class="nav__link">Menu</a></li>
+          <li><a href="#offers"   class="nav__link">Offers</a></li>
+          <li><a href="#gallery"  class="nav__link">Gallery</a></li>
+          <li><a href="#blog"     class="nav__link">Blog</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#reserve" class="btn btn--primary btn--sm">Book a Table</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ==========================================================
+         2. HERO SECTION (dynamic slider)
+    =========================================================== -->
+    <section class="hero" id="home">
+
+      <!-- Three background slides -->
+      <div class="hero__slides">
+        <div class="hero__slide is-active" style="background-image:url('images/img-01.jpg')"></div>
+        <div class="hero__slide" style="background-image:url('images/img-02.jpg')"></div>
+        <div class="hero__slide" style="background-image:url('images/img-03.jpg')"></div>
+      </div>
+
+      <div class="hero__overlay"></div>
+
+      <!-- Floating decorative circles -->
+      <span class="hero__blob hero__blob--1"></span>
+      <span class="hero__blob hero__blob--2"></span>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__tag">🔥 Welcome to Flavora Restaurant</p>
+          <h1 class="hero__title">
+            Taste the <em>Flavour</em><br />
+            of Real Happiness
+          </h1>
+          <p class="hero__text">
+            Freshly sourced ingredients, bold spices and recipes passed down through
+            generations — served in a place that feels like home.
+          </p>
+
+          <div class="hero__buttons">
+            <a href="#menu" class="btn btn--primary">Explore Our Menu</a>
+            <a href="#reserve" class="btn btn--ghost">Reserve a Table</a>
+          </div>
+
+          <ul class="hero__facts">
+            <li><strong>12+</strong><span>Years of Taste</span></li>
+            <li><strong>180+</strong><span>Signature Recipes</span></li>
+            <li><strong>4.9★</strong><span>Customer Rating</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Slider controls -->
+      <button class="hero__arrow hero__arrow--prev" id="heroPrev" aria-label="Previous">‹</button>
+      <button class="hero__arrow hero__arrow--next" id="heroNext" aria-label="Next">›</button>
+
+      <div class="hero__dots" id="heroDots">
+        <button class="hero__dot is-active" data-slide="0"></button>
+        <button class="hero__dot" data-slide="1"></button>
+        <button class="hero__dot" data-slide="2"></button>
+      </div>
+
+    </section>
+
+
+    <!-- ==========================================================
+         3. ABOUT SECTION
+    =========================================================== -->
+    <section class="section about" id="about">
+      <div class="container about__grid">
+
+        <div class="about__media reveal">
+          <img class="about__img about__img--big"
+               src="images/img-04.jpg"
+               alt="Chef cooking in the kitchen" loading="lazy" />
+
+          <img class="about__img about__img--small"
+               src="images/img-05.jpg"
+               alt="Fresh ingredients" loading="lazy" />
+
+          <div class="about__badge">
+            <strong>12+</strong>
+            <span>Years of<br />Experience</span>
+          </div>
+        </div>
+
+        <div class="about__body reveal">
+          <p class="section__tag">About Our Story</p>
+          <h2 class="section__title">A Kitchen Built on <em>Passion</em> &amp; Freshness</h2>
+          <p class="section__text">
+            Flavora started back in 2013 as a tiny kitchen with only six tables. Today we
+            serve hundreds of happy guests every single day — but the promise is exactly
+            the same: honest food, cooked fresh, served with a smile.
+          </p>
+
+          <ul class="check-list">
+            <li>100% fresh, hand-picked local ingredients</li>
+            <li>Experienced chefs with global training</li>
+            <li>Clean, comfortable and family friendly space</li>
+            <li>Fast home delivery within 30 minutes</li>
+          </ul>
+
+          <div class="about__footer">
+            <a href="#chefs" class="btn btn--primary">Meet Our Chefs</a>
+            <div class="about__sign">
+              <span>Rafiq Hasan</span>
+              <small>Founder &amp; Head Chef</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         4. FEATURES SECTION (why choose us)
+    =========================================================== -->
+    <section class="section section--tint features" id="features">
+      <div class="container">
+
+        <div class="section__head reveal">
+          <p class="section__tag">Why Choose Us</p>
+          <h2 class="section__title">More Than Just <em>Great Food</em></h2>
+        </div>
+
+        <div class="features__grid">
+          <article class="feature-card reveal">
+            <div class="feature-card__icon">🌿</div>
+            <h3>Fresh Ingredients</h3>
+            <p>Vegetables and meat arrive every morning from trusted local farms.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-card__icon">👨‍🍳</div>
+            <h3>Expert Chefs</h3>
+            <p>Our kitchen team has over 40 years of combined culinary experience.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-card__icon">⚡</div>
+            <h3>Quick Service</h3>
+            <p>Hot food on your table in under 15 minutes, every time you visit.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-card__icon">🚚</div>
+            <h3>Free Delivery</h3>
+            <p>No delivery charge on any order above ৳800 inside the city.</p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         5. SIGNATURE DISHES (card grid with tabs)
+    =========================================================== -->
+    <section class="section dishes" id="dishes">
+      <div class="container">
+
+        <div class="section__head reveal">
+          <p class="section__tag">Our Speciality</p>
+          <h2 class="section__title">Signature <em>Dishes</em></h2>
+          <p class="section__text">Handpicked favourites loved by thousands of our guests.</p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="tabs reveal" data-target="#dishGrid">
+          <button class="tab is-active" data-filter="all">All</button>
+          <button class="tab" data-filter="breakfast">Breakfast</button>
+          <button class="tab" data-filter="lunch">Lunch</button>
+          <button class="tab" data-filter="dinner">Dinner</button>
+          <button class="tab" data-filter="drinks">Drinks</button>
+        </div>
+
+        <div class="dishes__grid" id="dishGrid">
+
+          <article class="dish-card reveal" data-cat="dinner">
+            <div class="dish-card__thumb">
+              <img src="images/img-06.jpg" alt="Grilled Ribeye Steak" loading="lazy" />
+              <span class="dish-card__badge">Chef's Pick</span>
+              <button class="dish-card__fav" aria-label="Save">♡</button>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__top">
+                <h3>Grilled Ribeye Steak</h3>
+                <span class="dish-card__price">৳1250</span>
+              </div>
+              <p>Slow-grilled premium beef with herb butter and roasted vegetables.</p>
+              <div class="dish-card__meta">
+                <span class="stars">★★★★★ <em>4.9</em></span>
+                <span class="dish-card__time">◷ 25 min</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-cat="dinner">
+            <div class="dish-card__thumb">
+              <img src="images/img-07.jpg" alt="Creamy Alfredo Pasta" loading="lazy" />
+              <button class="dish-card__fav" aria-label="Save">♡</button>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__top">
+                <h3>Creamy Alfredo Pasta</h3>
+                <span class="dish-card__price">৳680</span>
+              </div>
+              <p>Fettuccine tossed in silky parmesan cream with grilled chicken.</p>
+              <div class="dish-card__meta">
+                <span class="stars">★★★★★ <em>4.8</em></span>
+                <span class="dish-card__time">◷ 18 min</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-cat="lunch">
+            <div class="dish-card__thumb">
+              <img src="images/img-08.jpg" alt="Margherita Pizza" loading="lazy" />
+              <span class="dish-card__badge">Popular</span>
+              <button class="dish-card__fav" aria-label="Save">♡</button>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__top">
+                <h3>Margherita Pizza</h3>
+                <span class="dish-card__price">৳550</span>
+              </div>
+              <p>Wood-fired thin crust with tomato, mozzarella and basil leaves.</p>
+              <div class="dish-card__meta">
+                <span class="stars">★★★★☆ <em>4.6</em></span>
+                <span class="dish-card__time">◷ 20 min</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-cat="lunch">
+            <div class="dish-card__thumb">
+              <img src="images/img-09.jpg" alt="Chicken Biryani" loading="lazy" />
+              <button class="dish-card__fav" aria-label="Save">♡</button>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__top">
+                <h3>Chicken Biryani</h3>
+                <span class="dish-card__price">৳420</span>
+              </div>
+              <p>Fragrant basmati rice layered with spiced chicken and saffron.</p>
+              <div class="dish-card__meta">
+                <span class="stars">★★★★★ <em>4.9</em></span>
+                <span class="dish-card__time">◷ 30 min</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-cat="breakfast">
+            <div class="dish-card__thumb">
+              <img src="images/img-10.jpg" alt="Avocado Toast Platter" loading="lazy" />
+              <button class="dish-card__fav" aria-label="Save">♡</button>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__top">
+                <h3>Avocado Toast Platter</h3>
+                <span class="dish-card__price">৳380</span>
+              </div>
+              <p>Sourdough bread, smashed avocado, poached egg and cherry tomato.</p>
+              <div class="dish-card__meta">
+                <span class="stars">★★★★☆ <em>4.5</em></span>
+                <span class="dish-card__time">◷ 12 min</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-cat="breakfast">
+            <div class="dish-card__thumb">
+              <img src="images/img-11.jpg" alt="Pancake Berry Stack" loading="lazy" />
+              <button class="dish-card__fav" aria-label="Save">♡</button>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__top">
+                <h3>Pancake Berry Stack</h3>
+                <span class="dish-card__price">৳350</span>
+              </div>
+              <p>Fluffy pancakes, seasonal berries, honey and a dust of icing sugar.</p>
+              <div class="dish-card__meta">
+                <span class="stars">★★★★★ <em>4.7</em></span>
+                <span class="dish-card__time">◷ 15 min</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-cat="drinks">
+            <div class="dish-card__thumb">
+              <img src="images/img-12.jpg" alt="Fresh Mango Smoothie" loading="lazy" />
+              <button class="dish-card__fav" aria-label="Save">♡</button>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__top">
+                <h3>Fresh Mango Smoothie</h3>
+                <span class="dish-card__price">৳220</span>
+              </div>
+              <p>Seasonal mango blended with yogurt, honey and a hint of mint.</p>
+              <div class="dish-card__meta">
+                <span class="stars">★★★★☆ <em>4.6</em></span>
+                <span class="dish-card__time">◷ 8 min</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-cat="drinks">
+            <div class="dish-card__thumb">
+              <img src="images/img-13.jpg" alt="Iced Caramel Latte" loading="lazy" />
+              <span class="dish-card__badge">New</span>
+              <button class="dish-card__fav" aria-label="Save">♡</button>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__top">
+                <h3>Iced Caramel Latte</h3>
+                <span class="dish-card__price">৳280</span>
+              </div>
+              <p>Double espresso, cold milk and house-made caramel over ice.</p>
+              <div class="dish-card__meta">
+                <span class="stars">★★★★★ <em>4.8</em></span>
+                <span class="dish-card__time">◷ 6 min</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         6. FULL MENU (text based menu list)
+    =========================================================== -->
+    <section class="section section--dark menu" id="menu">
+      <div class="container">
+
+        <div class="section__head reveal">
+          <p class="section__tag">Food Menu</p>
+          <h2 class="section__title">Today's <em>Full Menu</em></h2>
+        </div>
+
+        <div class="tabs tabs--dark reveal" data-target="#menuList">
+          <button class="tab is-active" data-filter="all">All</button>
+          <button class="tab" data-filter="starter">Starters</button>
+          <button class="tab" data-filter="main">Main Course</button>
+          <button class="tab" data-filter="dessert">Desserts</button>
+        </div>
+
+        <div class="menu__grid" id="menuList">
+
+          <div class="menu-list">
+            <div class="menu-list__item" data-cat="main">
+              <div class="menu-list__head"><h3>Beef Tenderloin</h3><span class="menu-list__price">৳980</span></div>
+              <p>Pan-seared tenderloin, red wine sauce, mashed potato.</p>
+            </div>
+            <div class="menu-list__item" data-cat="starter">
+              <div class="menu-list__head"><h3>Garlic Prawn Skewer</h3><span class="menu-list__price">৳520</span></div>
+              <p>Butter garlic prawns grilled with lemon and chili flakes.</p>
+            </div>
+            <div class="menu-list__item" data-cat="starter">
+              <div class="menu-list__head"><h3>Crispy Chicken Wings</h3><span class="menu-list__price">৳360</span></div>
+              <p>Six pieces tossed in our signature smoky BBQ glaze.</p>
+            </div>
+            <div class="menu-list__item" data-cat="main">
+              <div class="menu-list__head"><h3>Grilled Salmon Fillet</h3><span class="menu-list__price">৳1150</span></div>
+              <p>Norwegian salmon, asparagus and creamy dill sauce.</p>
+            </div>
+          </div>
+
+          <div class="menu-list">
+            <div class="menu-list__item" data-cat="main">
+              <div class="menu-list__head"><h3>Beef Cheese Burger</h3><span class="menu-list__price">৳450</span></div>
+              <p>Double patty, cheddar, pickles and crispy fries.</p>
+            </div>
+            <div class="menu-list__item" data-cat="dessert">
+              <div class="menu-list__head"><h3>Chocolate Lava Cake</h3><span class="menu-list__price">৳290</span></div>
+              <p>Warm molten cake with vanilla ice cream on the side.</p>
+            </div>
+            <div class="menu-list__item" data-cat="dessert">
+              <div class="menu-list__head"><h3>Classic Cheesecake</h3><span class="menu-list__price">৳270</span></div>
+              <p>Baked New York style cheesecake with berry compote.</p>
+            </div>
+            <div class="menu-list__item" data-cat="dessert">
+              <div class="menu-list__head"><h3>Seasonal Fruit Bowl</h3><span class="menu-list__price">৳210</span></div>
+              <p>Fresh cut fruits with honey, lime and mint leaves.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="menu__note reveal">
+          <p>All prices are inclusive of VAT. Allergies? Just tell our waiter — we will adjust.</p>
+          <a href="#reserve" class="btn btn--primary">Order Now</a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         7. OFFERS SECTION (with countdown timer)
+    =========================================================== -->
+    <section class="section offers" id="offers">
+      <div class="container offers__grid">
+
+        <div class="offers__body reveal">
+          <p class="section__tag">Limited Time Offer</p>
+          <h2 class="section__title">Weekend Family Combo — <em>35% Off</em></h2>
+          <p class="section__text">
+            Get 2 main courses, 2 drinks and 1 dessert for the whole family.
+            Offer is valid for dine-in only and ends soon!
+          </p>
+
+          <!-- Countdown timer (driven by JavaScript) -->
+          <div class="timer" id="timer">
+            <div class="timer__box"><strong id="tDay">00</strong><span>Days</span></div>
+            <div class="timer__box"><strong id="tHour">00</strong><span>Hours</span></div>
+            <div class="timer__box"><strong id="tMin">00</strong><span>Minutes</span></div>
+            <div class="timer__box"><strong id="tSec">00</strong><span>Seconds</span></div>
+          </div>
+
+          <a href="#reserve" class="btn btn--primary">Grab This Offer</a>
+        </div>
+
+        <div class="offers__cards">
+          <div class="offer-card offer-card--1 reveal">
+            <span class="offer-card__off">-25%</span>
+            <h3>Lunch Deal</h3>
+            <p>Any lunch main course + soft drink</p>
+            <small>Mon – Fri, 12 PM – 3 PM</small>
+          </div>
+
+          <div class="offer-card offer-card--2 reveal">
+            <span class="offer-card__off">-40%</span>
+            <h3>Student Offer</h3>
+            <p>Show your ID card and save big</p>
+            <small>Every day after 4 PM</small>
+          </div>
+
+          <div class="offer-card offer-card--3 reveal">
+            <span class="offer-card__off">FREE</span>
+            <h3>Birthday Cake</h3>
+            <p>Book a party of 6+ and get a cake</p>
+            <small>Reservation required</small>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         8. STATS COUNTER SECTION
+    =========================================================== -->
+    <section class="stats">
+      <div class="container stats__grid">
+        <div class="stat reveal">
+          <strong class="stat__num" data-count="85">0</strong>
+          <span>Team Members</span>
+        </div>
+        <div class="stat reveal">
+          <strong class="stat__num" data-count="12000">0</strong>
+          <span>Happy Customers</span>
+        </div>
+        <div class="stat reveal">
+          <strong class="stat__num" data-count="180">0</strong>
+          <span>Menu Items</span>
+        </div>
+        <div class="stat reveal">
+          <strong class="stat__num" data-count="24">0</strong>
+          <span>Awards Won</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         9. CHEF TEAM SECTION
+    =========================================================== -->
+    <section class="section chefs" id="chefs">
+      <div class="container">
+
+        <div class="section__head reveal">
+          <p class="section__tag">Our Team</p>
+          <h2 class="section__title">Meet Our Expert <em>Chefs</em></h2>
+        </div>
+
+        <div class="chefs__grid">
+
+          <article class="chef-card reveal">
+            <div class="chef-card__thumb">
+              <img src="images/img-14.jpg" alt="Chef Rafiq Hasan" loading="lazy" />
+              <div class="chef-card__social">
+                <a href="#!" aria-label="Facebook">f</a>
+                <a href="#!" aria-label="Instagram">ig</a>
+                <a href="#!" aria-label="Twitter">x</a>
+              </div>
+            </div>
+            <h3>Rafiq Hasan</h3>
+            <span>Head Chef</span>
+          </article>
+
+          <article class="chef-card reveal">
+            <div class="chef-card__thumb">
+              <img src="images/img-15.jpg" alt="Chef Nusrat Jahan" loading="lazy" />
+              <div class="chef-card__social">
+                <a href="#!" aria-label="Facebook">f</a>
+                <a href="#!" aria-label="Instagram">ig</a>
+                <a href="#!" aria-label="Twitter">x</a>
+              </div>
+            </div>
+            <h3>Nusrat Jahan</h3>
+            <span>Pastry Chef</span>
+          </article>
+
+          <article class="chef-card reveal">
+            <div class="chef-card__thumb">
+              <img src="images/img-16.jpg" alt="Chef Tanvir Ahmed" loading="lazy" />
+              <div class="chef-card__social">
+                <a href="#!" aria-label="Facebook">f</a>
+                <a href="#!" aria-label="Instagram">ig</a>
+                <a href="#!" aria-label="Twitter">x</a>
+              </div>
+            </div>
+            <h3>Tanvir Ahmed</h3>
+            <span>Sous Chef</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         10. GALLERY SECTION (filter + lightbox)
+    =========================================================== -->
+    <section class="section section--tint gallery" id="gallery">
+      <div class="container">
+
+        <div class="section__head reveal">
+          <p class="section__tag">Our Gallery</p>
+          <h2 class="section__title">A Look Inside <em>Flavora</em></h2>
+        </div>
+
+        <div class="tabs reveal" data-target="#galleryGrid">
+          <button class="tab is-active" data-filter="all">All</button>
+          <button class="tab" data-filter="food">Food</button>
+          <button class="tab" data-filter="place">Place</button>
+          <button class="tab" data-filter="drink">Drinks</button>
+        </div>
+
+        <div class="gallery__grid" id="galleryGrid">
+          <figure class="gallery__item reveal" data-cat="place">
+            <img src="images/img-17.jpg" alt="Dining area" loading="lazy" />
+            <figcaption>Our Dining Space</figcaption>
+          </figure>
+          <figure class="gallery__item reveal" data-cat="drink">
+            <img src="images/img-18.jpg" alt="Coffee" loading="lazy" />
+            <figcaption>Fresh Coffee</figcaption>
+          </figure>
+          <figure class="gallery__item reveal" data-cat="food">
+            <img src="images/img-19.jpg" alt="Desserts" loading="lazy" />
+            <figcaption>Sweet Corner</figcaption>
+          </figure>
+          <figure class="gallery__item reveal" data-cat="food">
+            <img src="images/img-20.jpg" alt="Sushi" loading="lazy" />
+            <figcaption>Chef's Sushi</figcaption>
+          </figure>
+          <figure class="gallery__item reveal" data-cat="food">
+            <img src="images/img-21.jpg" alt="Barbecue" loading="lazy" />
+            <figcaption>Weekend BBQ</figcaption>
+          </figure>
+          <figure class="gallery__item reveal" data-cat="drink">
+            <img src="images/img-22.jpg" alt="Drinks" loading="lazy" />
+            <figcaption>Signature Drinks</figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         11. RESERVATION SECTION (form)
+    =========================================================== -->
+    <section class="section reserve" id="reserve">
+      <div class="container reserve__grid">
+
+        <div class="reserve__info reveal">
+          <p class="section__tag">Reservation</p>
+          <h2 class="section__title">Book Your Table <em>Today</em></h2>
+          <p class="section__text">
+            Planning a family dinner or a small celebration? Reserve your table
+            in advance and we will keep it ready for you.
+          </p>
+
+          <ul class="info-list">
+            <li><span class="info-list__icon">📍</span> 24 Gulshan Avenue, Dhaka 1212</li>
+            <li><span class="info-list__icon">📞</span> +880 1712-345678</li>
+            <li><span class="info-list__icon">✉️</span> hello@flavora.com</li>
+            <li><span class="info-list__icon">⏰</span> Open daily 10:00 AM – 11:30 PM</li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="reserveForm" novalidate>
+          <h3 class="form__title">Reserve a Table</h3>
+
+          <div class="form__row">
+            <div class="form__group">
+              <label for="rName">Full Name</label>
+              <input type="text" id="rName" placeholder="Your name" required />
+            </div>
+            <div class="form__group">
+              <label for="rPhone">Phone Number</label>
+              <input type="tel" id="rPhone" placeholder="01XXXXXXXXX" required />
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="form__group">
+              <label for="rDate">Date</label>
+              <input type="date" id="rDate" required />
+            </div>
+            <div class="form__group">
+              <label for="rTime">Time</label>
+              <input type="time" id="rTime" required />
+            </div>
+          </div>
+
+          <div class="form__group">
+            <label for="rGuest">Number of Guests</label>
+            <select id="rGuest">
+              <option value="1">1 Person</option>
+              <option value="2" selected>2 People</option>
+              <option value="3">3 People</option>
+              <option value="4">4 People</option>
+              <option value="6">6+ People (Party)</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="rMsg">Special Request</label>
+            <textarea id="rMsg" rows="3" placeholder="Any allergy or special note..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block">Confirm Reservation</button>
+          <p class="form__note">We will call you within 10 minutes to confirm.</p>
+        </form>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         12. TESTIMONIAL SLIDER
+    =========================================================== -->
+    <section class="section section--dark testimonials" id="testimonials">
+      <div class="container">
+
+        <div class="section__head reveal">
+          <p class="section__tag">Testimonials</p>
+          <h2 class="section__title">What Our <em>Guests Say</em></h2>
+        </div>
+
+        <div class="t-slider reveal" id="tSlider">
+
+          <div class="t-card is-active">
+            <div class="t-card__quote">”</div>
+            <p class="t-card__text">
+              The biryani here is easily the best I have had in Dhaka. Warm staff,
+              beautiful interior and very reasonable prices.
+            </p>
+            <div class="t-card__user">
+              <span class="t-card__avatar">SA</span>
+              <div>
+                <strong>Sadia Afrin</strong>
+                <small>Food Blogger</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="t-card">
+            <div class="t-card__quote">”</div>
+            <p class="t-card__text">
+              We booked the whole place for my brother's birthday. The team decorated
+              everything and the cake was on the house. Unforgettable evening!
+            </p>
+            <div class="t-card__user">
+              <span class="t-card__avatar">MR</span>
+              <div>
+                <strong>Mahmud Rahman</strong>
+                <small>Regular Guest</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="t-card">
+            <div class="t-card__quote">”</div>
+            <p class="t-card__text">
+              I order lunch from Flavora almost every working day. Always fresh,
+              always on time and the packaging is spotless.
+            </p>
+            <div class="t-card__user">
+              <span class="t-card__avatar">TH</span>
+              <div>
+                <strong>Tahmina Haque</strong>
+                <small>Corporate Client</small>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="t-slider__dots" id="tDots">
+          <button class="hero__dot is-active" data-slide="0"></button>
+          <button class="hero__dot" data-slide="1"></button>
+          <button class="hero__dot" data-slide="2"></button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         13. BLOG / NEWS SECTION
+    =========================================================== -->
+    <section class="section blog" id="blog">
+      <div class="container">
+
+        <div class="section__head reveal">
+          <p class="section__tag">From Our Blog</p>
+          <h2 class="section__title">Kitchen <em>Stories</em> &amp; News</h2>
+        </div>
+
+        <div class="blog__grid">
+
+          <article class="blog-card reveal">
+            <div class="blog-card__thumb">
+              <img src="images/img-23.jpg" alt="Plating" loading="lazy" />
+              <span class="blog-card__date">12 Oct</span>
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Kitchen Tips</span>
+              <h3>5 Secrets Behind Perfect Plating</h3>
+              <p>Small details change how a dish tastes in your mind. Here is how our chefs plate every plate.</p>
+              <a href="#!" class="blog-card__link">Read More →</a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal">
+            <div class="blog-card__thumb">
+              <img src="images/img-24.jpg" alt="Coffee culture" loading="lazy" />
+              <span class="blog-card__date">28 Sep</span>
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Coffee</span>
+              <h3>Why Our Coffee Tastes Different</h3>
+              <p>We roast small batches every week — and that single habit changes everything in the cup.</p>
+              <a href="#!" class="blog-card__link">Read More →</a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal">
+            <div class="blog-card__thumb">
+              <img src="images/img-25.jpg" alt="Seasonal food" loading="lazy" />
+              <span class="blog-card__date">05 Sep</span>
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Sourcing</span>
+              <h3>Cooking With the Season</h3>
+              <p>Meet the farmers who supply our kitchen and why seasonal food simply tastes better.</p>
+              <a href="#!" class="blog-card__link">Read More →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         14. NEWSLETTER CTA SECTION
+    =========================================================== -->
+    <section class="section newsletter" id="newsletter">
+      <div class="container newsletter__inner reveal">
+        <div class="newsletter__body">
+          <h2>Get 10% Off Your First Order</h2>
+          <p>Join our newsletter for new dishes, seasonal offers and event invitations.</p>
+        </div>
+
+        <form class="newsletter__form" id="newsletterForm" novalidate>
+          <input type="email" id="nEmail" placeholder="Enter your email address" required />
+          <button type="submit" class="btn btn--primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ==========================================================
+       15. FOOTER SECTION
+  =========================================================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+
+      <div class="footer__col">
+        <a href="#home" class="logo logo--footer">
+          <span class="logo__icon">🍴</span>
+          <span class="logo__text">Fla<em>vora</em></span>
+        </a>
+        <p>
+          A modern kitchen serving honest, fresh and flavourful food since 2013.
+          Come hungry, leave happy.
+        </p>
+        <div class="footer__social">
+          <a href="#!" aria-label="Facebook">f</a>
+          <a href="#!" aria-label="Instagram">ig</a>
+          <a href="#!" aria-label="Youtube">yt</a>
+          <a href="#!" aria-label="X">x</a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#dishes">Our Dishes</a></li>
+          <li><a href="#offers">Offers</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#blog">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Opening Hours</h4>
+        <ul class="footer__hours">
+          <li><span>Mon – Thu</span><span>10:00 – 23:00</span></li>
+          <li><span>Friday</span><span>14:00 – 23:30</span></li>
+          <li><span>Saturday</span><span>10:00 – 23:30</span></li>
+          <li><span>Sunday</span><span>10:00 – 22:00</span></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contact Us</h4>
+        <ul class="footer__links">
+          <li>24 Gulshan Avenue, Dhaka</li>
+          <li><a href="tel:+8801712345678">+880 1712-345678</a></li>
+          <li><a href="mailto:hello@flavora.com">hello@flavora.com</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© 2026 Flavora Restaurant. All rights reserved.</p>
+      <p>Designed &amp; built with HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+
+  <!-- Back to top button -->
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+
+  <!-- Lightbox to preview the gallery images -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">×</button>
+    <img src="" alt="Preview" id="lightboxImg" />
+  </div>
+
+
+  <!-- Small notification message (toast) -->
+  <div class="toast" id="toast"></div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
